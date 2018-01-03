@@ -1,0 +1,7 @@
+  parity:
+    image: parity/parity:v1.8.5
+    restart: always
+    working_dir: /parity/
+    command: --fast-and-loose --jsonrpc-interface all --jsonrpc-hosts all --jsonrpc-cors * --ui-interface all --ws-interface all --ws-origins all --chain mainnet
+    volumes:
+      - ./data/parity:/root/.local
